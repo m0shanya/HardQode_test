@@ -11,11 +11,17 @@ class Product(models.Model):
         verbose_name="ProductOwner"
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Lesson(models.Model):
     name = models.CharField(max_length=50)
     link = models.URLField(null=False, blank=True)
     duration = models.IntegerField(null=False, blank=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Status(models.Model):
