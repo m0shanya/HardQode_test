@@ -5,7 +5,7 @@ from django.conf import settings
 class Product(models.Model):
     name = models.CharField(max_length=50)
     owner = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        'auth.User',
         on_delete=models.CASCADE,
         related_name='ProductOwner',
         verbose_name="ProductOwner"
