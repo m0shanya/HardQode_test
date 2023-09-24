@@ -33,6 +33,7 @@ class Status(models.Model):
     )
     time = models.IntegerField(null=False, blank=True)
     status = models.BooleanField(default=0)
+    date = models.DateField(auto_now=True)
 
 
 class Belonging(models.Model):
